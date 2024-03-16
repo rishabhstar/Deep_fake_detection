@@ -1,6 +1,4 @@
-import json
-from flask import Flask, jsonify, request
-
+import os
 from flask import Flask, render_template, request, jsonify
 import librosa
 import pickle
