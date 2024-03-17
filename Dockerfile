@@ -22,4 +22,4 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 # Run the application.
-CMD python main.py
+CMD python ./main.py
