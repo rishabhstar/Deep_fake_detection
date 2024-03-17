@@ -8,7 +8,7 @@ ARG PYTHON_VERSION=3.9.6
 FROM python:${PYTHON_VERSION}-slim as base
 
 WORKDIR ./app
-COPY . /app
+COPY .. /app
 # Download dependencies as a separate step to take advantage of Docker's caching.
 # Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
 # Leverage a bind mount to requirements.txt to avoid having to copy them into
@@ -18,8 +18,5 @@ RUN pip install -r requirements.txt
 # Copy the source code into the container.
 
 
-# Expose the port that the application listens on.
-EXPOSE 4444
-
 # Run the application.
-CMD python ./main.py
+CMD ["python" ,"./main.py"]
