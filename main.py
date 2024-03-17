@@ -1,4 +1,4 @@
-import os
+
 from flask import Flask, render_template, request, jsonify
 import librosa
 import pickle
@@ -9,7 +9,7 @@ model_pkl_file = "Xg_Boost_model.pkl"
 
 
 
-@app.route('/upload', methods=['GET', 'POST'])
+@app.route('/upload', methods=['POST'])
 def upload_file():
     if request.method == 'POST':
         f = request.files['file']
