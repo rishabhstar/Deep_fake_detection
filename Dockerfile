@@ -19,7 +19,7 @@ RUN pip install -r requirements.txt
 
 
 # Expose the port that the application listens on.
-EXPOSE 8080
+EXPOSE 4444
 
 # Run the application.
 CMD python ./main.py

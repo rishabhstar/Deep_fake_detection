@@ -5,5 +5,4 @@ steps:
     args: [ "install", "-r", "requirements.txt", "--user" ]
   # [END cloudbuild_python_dependencies_yaml]
 
-options:
-  logging: CLOUD_LOGGING_ONLY
+
